@@ -13,16 +13,16 @@ form.addEventListener('submit', function(e){
         return numeroTotalA < numeroTotalB;
     }
 
+        const containerMensagemSucesso = document.querySelector('.success-message');
+        const containerMensagemError = document.querySelector('.error-message');
     formEValido = validaNumero(numeroTotalA, numeroTotalB);
     if (formEValido) {
-        const containerMensagemSucesso = document.querySelector('.success-message');
         containerMensagemSucesso.innerHTML = mensagemSucesso;
         containerMensagemSucesso.style.display = 'block';
         containerMensagemError.style.display = 'none';
         
     }
     else {
-        const containerMensagemError = document.querySelector('.error-message');
         containerMensagemError.innerHTML = mensagemError;
         containerMensagemError.style.display = 'block';
         containerMensagemSucesso.style.display = 'none';
